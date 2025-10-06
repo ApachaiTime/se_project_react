@@ -1,0 +1,41 @@
+.item__modal__container {
+  position: fixed;
+  width: 670px;
+  height: 368px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+}
+
+.item__modal__img {
+  margin: 20px;
+  border-radius: 16px;
+}
+
+.item__modal__close-btn {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.item__modal__title {
+  top: 33px;
+  height: fit-content;
+  font-weight: 700;
+  line-height: 20px;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  right: 297px;
+  left: 0;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 2px 12px;
+  border-radius: 4px;
+  background-color: #fff;
+  position: absolute;
+  color: rgba(0, 0, 0, 0.6);
+}

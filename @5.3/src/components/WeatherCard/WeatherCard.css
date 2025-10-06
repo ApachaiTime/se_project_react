@@ -1,0 +1,14 @@
+.weather-card {
+  background: rgba(0, 163, 255, 1);
+  height: 80px;
+  border-radius: 12px;
+}
+.weather-card__temperature {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+  padding: 20px 16px;
+  color: #ffffff;
+}

@@ -1,0 +1,56 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header__span-left {
+  align-items: center;
+  display: flex;
+}
+.header__span-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__logo {
+  width: 89px;
+  height: 40px;
+  margin-right: 24px;
+}
+
+.header__info {
+  font-family: "Cabinet Grotesk", sans-serif;
+  line-height: 24px;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+
+.header__btn {
+  font-family: "Cabinet Grotesk", sans-serif;
+  line-height: 24px;
+  font-weight: 700;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.header__name {
+  margin: 0;
+  font-family: "Cabinet Grotesk", sans-serif;
+  line-height: 100%;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}

@@ -1,6 +1,4 @@
 import "./Header.css";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import WeatherCard from "../WeatherCard/WeatherCard";
 import appLogo from "../../assets/app-logo.png";
 import avatarPlaceholder from "../../assets/avatar.svg";
 const currentDate = new Date().toLocaleString("default", {
@@ -22,7 +20,11 @@ export default function Header({ weatherData, handleOpenAddGarmentModal }) {
             + Add clothes
           </button>
           <p className="header__name">Terrence</p>
-          <img src={avatarPlaceholder} alt="" className="header__avatar" />
+          <img
+            src={avatarPlaceholder}
+            alt="User avatar"
+            className="header__avatar"
+          />
         </span>
       </div>
     </header>

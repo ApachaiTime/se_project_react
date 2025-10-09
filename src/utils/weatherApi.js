@@ -21,3 +21,12 @@ export function getWeatherCondition(temperature) {
     return "cold";
   }
 }
+
+export function handleError(error) {
+  console.error("Error fetching weather data:", error);
+  return {
+    city: "failed to load",
+    temperature: "unknown",
+    condition: "failed to load",
+  };
+}

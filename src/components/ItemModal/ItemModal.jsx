@@ -7,7 +7,7 @@ export default function ItemModal({ isOpen, card, onClose }) {
     <div className={`modal ${isOpen ? "modal_is-opened" : ""}`}>
       <div className="item__modal__container">
         <button className="item__modal__close-btn" onClick={onClose}>
-          <img src={closeIcon} alt="Close button" />
+          <img src={closeIcon} alt="Close icon" />
         </button>
         <img className="item__modal__img" src={card.link} alt={card.name} />
         <h2 className="item__modal__title">{card.name}</h2>

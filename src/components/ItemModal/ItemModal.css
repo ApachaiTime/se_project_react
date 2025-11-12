@@ -7,35 +7,100 @@
   display: flex;
 }
 
+.item__modal__content {
+  position: relative;
+}
+
 .item__modal__img {
   margin: 20px;
   border-radius: 16px;
+  width: 328px;
+  height: 328px;
 }
 
 .item__modal__close-btn {
+  z-index: 1;
   position: absolute;
-  top: 23px;
-  right: 23px;
+  top: 15px;
+  right: 11px;
   background: none;
   border: none;
   cursor: pointer;
 }
 
 .item__modal__title {
-  top: 33px;
-  height: fit-content;
+  bottom: 350px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 12px auto;
   font-weight: 700;
   line-height: 20px;
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
   font-size: 16px;
-  right: 297px;
-  left: 0;
-  margin: 0 auto;
-  width: fit-content;
+  right: 135px;
   padding: 2px 12px;
   border-radius: 4px;
+  max-width: fit-content;
   background-color: #fff;
-  position: absolute;
+  position: relative;
   color: rgba(0, 0, 0, 0.6);
+}
+
+.item__modal__delete {
+  background: none;
+  border-style: none;
+  color: #ff4d00;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  width: 101px;
+  height: 24px;
+  white-space: nowrap;
+  position: relative;
+  left: -95px;
+  bottom: -314px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 760px) {
+  .item__modal__img {
+    border-radius: 12px 12px 0 0;
+    margin: 0;
+    width: 343px;
+  }
+
+  .item__modal__container {
+    width: 343px;
+    height: 463px;
+    border-radius: 12px;
+  }
+
+  .item__modal__title {
+    font-size: 20px;
+    bottom: -5px;
+    left: 0;
+    color: #000;
+    margin-left: 20px;
+    padding: 0;
+  }
+
+  .item__modal__condition {
+    position: absolute;
+    bottom: 34px;
+    margin-left: 20px;
+
+    font-size: 20px;
+    font-family: "Cabinet Grotesk", sans-serif;
+  }
+
+  .item__modal__delete {
+    bottom: -340px;
+    left: -125px;
+  }
+  .item__modal__close-btn {
+    top: 13px;
+    right: 7px;
+  }
 }

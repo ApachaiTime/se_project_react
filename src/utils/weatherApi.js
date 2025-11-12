@@ -4,11 +4,17 @@ export function getWeatherData() {
   return fetch(weatherURL)
     .then((res) => res.json())
     .then((data) => {
-      return {
+      const weatherInfo = {
         city: data.name,
         temperature: Math.round(data.main.temp),
+        temperatureC: Math.round(((data.main.temp - 32) * 5) / 9),
         condition: data.weather[0].main,
+        time: data.dt,
+        sunset: data.sys.sunset,
+        sunrise: data.sys.sunrise,
       };
+
+      return weatherInfo;
     });
 }
 

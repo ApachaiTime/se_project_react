@@ -1,0 +1,79 @@
+.toggle-switch__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-switch__input {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle-switch__label {
+  border: 2px solid rgba(126, 126, 126, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 56px;
+  height: 28px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.toggle-switch__label .toggle-switch__slider {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  left: -1px;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 20px;
+  transition: 0.2s;
+  box-shadow: 0 0 2px rgba(10, 10, 10, 0.2);
+}
+
+.toggle-switch__label:hover .toggle-switch__slider {
+  width: 34px;
+}
+
+.toggle-switch__input:checked + .toggle-switch__label .toggle-switch__slider {
+  left: calc(100% + 1px);
+  transform: translate(-100%);
+}
+
+.toggle-switch__label:active .toggle-switch__slider {
+  width: 58px;
+}
+.toggle-switch__F {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  left: 9px;
+}
+
+.toggle-switch__C {
+  position: relative;
+  color: rgba(126, 126, 126, 1);
+  z-index: 1;
+  right: 8px;
+}
+
+.toggle-switch__input:checked + .toggle-switch__label .toggle-switch__F {
+  color: rgba(126, 126, 126, 1);
+}
+
+.toggle-switch__input:checked + .toggle-switch__label .toggle-switch__C {
+  color: #fff;
+}
+
+@media screen and (max-width: 760px) {
+  .toggle-switch__container {
+    visibility: hidden;
+  }
+}

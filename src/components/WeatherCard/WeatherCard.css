@@ -1,8 +1,16 @@
 .weather-card {
   background: rgba(0, 163, 255, 1);
+  display: flex;
   height: 80px;
   border-radius: 12px;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
+
+.weather-card__icon {
+  border-radius: 0 12px 12px 0;
+}
+
 .weather-card__temperature {
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
@@ -11,4 +19,8 @@
   margin: 0;
   padding: 20px 16px;
   color: #ffffff;
+}
+@media screen and (max-width: 760px) {
+  .weather-card__icon {
+  }
 }

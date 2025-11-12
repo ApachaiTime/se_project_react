@@ -8,3 +8,10 @@
   line-height: 100%;
   margin: 40px 0;
 }
+
+@media screen and (max-width: 670px) {
+  .main__title {
+    width: 100%;
+    text-align: center;
+  }
+}

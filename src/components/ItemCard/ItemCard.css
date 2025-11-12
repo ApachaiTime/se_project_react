@@ -1,6 +1,5 @@
 .item-cards__container {
   display: flex;
-  flex-direction: row;
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
@@ -39,4 +38,23 @@
   width: 328px;
   height: 328px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 751px) {
+  .item-cards__container {
+  }
+
+  .item-card {
+    width: 164px;
+    height: 164px;
+  }
+
+  .item__title {
+    bottom: 170px;
+  }
+
+  .item__img {
+    width: 164px;
+    height: 164px;
+  }
 }

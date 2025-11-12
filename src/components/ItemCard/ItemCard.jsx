@@ -4,7 +4,7 @@ export function ItemCard({ card, handleCardClick }) {
     <div className="item-card">
       <img
         className="item__img"
-        src={card.link}
+        src={card.imageUrl}
         alt={card.name}
         onClick={() => handleCardClick(card)}
       />

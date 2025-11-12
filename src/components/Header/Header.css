@@ -1,7 +1,8 @@
 .header__container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 47px;
+  position: relative;
 }
 
 .header__span-left {
@@ -26,6 +27,7 @@
   font-weight: 700;
   font-size: 20px;
   margin: 0;
+  white-space: nowrap;
 }
 
 .header__btn {
@@ -53,4 +55,39 @@
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
+}
+
+.header__options {
+  visibility: hidden;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  background-color: rgba(243, 243, 243, 1);
+  border-style: none;
+  position: absolute;
+  right: 15px;
+}
+
+@media screen and (max-width: 760px) {
+  .header__container {
+    margin-bottom: 16px;
+  }
+
+  .header__logo {
+    margin-bottom: 34px;
+    width: 89px;
+    height: 40px;
+    margin-right: 80px;
+  }
+
+  .header__span-right {
+    visibility: collapse;
+  }
+  .header__options {
+    visibility: visible;
+  }
+
+  .header__span-left {
+    flex-direction: column;
+  }
 }

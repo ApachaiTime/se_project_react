@@ -16,7 +16,6 @@ export const AddItemModal = ({
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    console.log(values);
     onAddItem(values);
     setValues({ name: "", imageUrl: "", weather: "", id: "" });
     onClose();

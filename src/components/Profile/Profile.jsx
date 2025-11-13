@@ -1,7 +1,6 @@
-import { getWeatherCondition } from "../../utils/weatherApi";
 import SideBar from "../SideBar/SideBar";
+import ClothesSection from "../ClothesSection/ClothesSection";
 import "./Profile.css";
-import { ItemCard } from "../ItemCard/ItemCard";
 
 export default function Profile({
   cards,
@@ -9,43 +8,18 @@ export default function Profile({
   weatherData,
   handleOpenAddGarmentModal,
 }) {
-  const filteredClothes = cards.filter((item) => {
-    return item.weather === getWeatherCondition(weatherData.temperature);
-  });
   return (
     <div className="profile">
       <div className="profile__content">
         <SideBar />
-        <span className="profile__header__items">
-          <p className="profile__header__text">Your items</p>
-          <button
-            className="profile__header__btn"
-            onClick={handleOpenAddGarmentModal}
-          >
-            + Add new
-          </button>
-        </span>
+
+        <ClothesSection
+          cards={cards}
+          handleCardClick={handleCardClick}
+          weatherData={weatherData}
+          handleOpenAddGarmentModal={handleOpenAddGarmentModal}
+        />
       </div>
-      <ul
-        className="item-cards__container"
-        style={{
-          marginLeft: "auto",
-          paddingTop: "48px",
-          justifyContent: "flex-end",
-          maxWidth: "1500px",
-        }}
-      >
-        {filteredClothes.map(
-          (card) =>
-            card && (
-              <ItemCard
-                key={card.name}
-                card={card}
-                handleCardClick={handleCardClick}
-              />
-            )
-        )}
-      </ul>
     </div>
   );
 }

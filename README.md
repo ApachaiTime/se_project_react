@@ -36,3 +36,5 @@ Sleek, modern design with an easy-to-navigate interface
 - [Project Link](https://apachaitime.github.io/se_project_react/)
 
 - [Figma Design](https://www.figma.com/file/DTojSwldenF9UPKQZd6RRb/Sprint-10%3A-WTWR)
+
+- [Project Pitch Video](https://www.loom.com/share/6afd91a0a98b4abba0a99e76360af347?t=1)

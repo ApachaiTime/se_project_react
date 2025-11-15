@@ -25,7 +25,6 @@ export default function ModalWithForm({
             {children}
 
             <button
-              onClick={handleSubmit}
               type="submit"
               className="modal__submit-button"
             >

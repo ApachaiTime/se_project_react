@@ -6,42 +6,48 @@ import "./WeatherCard.css";
 import { useContext } from "react";
 
 export default function WeatherCard({ weatherData }) {
-  const currentUnit = useContext(CurrentTemperatureUnitContext);
-  const CloudyCondition = weatherData["condition"] === "Clouds";
-  const RainyCondition = weatherData["condition"] === "Rain";
-  const DayTime = weatherData["sunrise"];
-  const NightTime = weatherData["sunset"];
-  const CurrentTime = weatherData["time"];
-  return CloudyCondition === true ? (
+  const { currentTempUnit } = useContext(CurrentTemperatureUnitContext);
+  const cloudyCondition = weatherData["condition"] === "Clouds";
+  const rainyCondition = weatherData["condition"] === "Rain";
+
+  return cloudyCondition === true ? (
     <div className="weather-card">
-      <img className="weather-card__icon" src={Cloudy} alt="" />
+      <img
+        className="weather-card__icon"
+        src={Cloudy}
+        alt="Cloudy conditions"
+      />
       <p className="weather-card__temperature">
-        {weatherData["temperature" + (currentUnit === "C" ? "C" : "")] +
+        {weatherData["temperature" + (currentTempUnit === "C" ? "C" : "")] +
           "°" +
-          currentUnit}
+          currentTempUnit}
       </p>
     </div>
-  ) : RainyCondition === true ? (
+  ) : rainyCondition === true ? (
     <div
       style={{
         backgroundColor: "rgba(108, 166, 199, 1)",
       }}
       className="weather-card"
     >
-      <img className="weather-card__icon" src={Thunderstorm} alt="" />
+      <img
+        className="weather-card__icon"
+        src={Thunderstorm}
+        alt="Rainy conditions"
+      />
       <p className="weather-card__temperature">
-        {weatherData["temperature" + (currentUnit === "C" ? "C" : "")] +
+        {weatherData["temperature" + (currentTempUnit === "C" ? "C" : "")] +
           "°" +
-          currentUnit}
+          currentTempUnit}
       </p>
     </div>
   ) : (
     <div className="weather-card">
       <img className="weather-card__icon" src={Sun} alt="" />
       <p className="weather-card__temperature">
-        {weatherData["temperature" + (currentUnit === "C" ? "C" : "")] +
+        {weatherData["temperature" + (currentTempUnit === "C" ? "C" : "")] +
           "°" +
-          currentUnit}
+          currentTempUnit}
       </p>
     </div>
   );

@@ -22,7 +22,6 @@
   font-weight: 700;
   line-height: 20px;
   font-family: "Cabinet Grotesk", sans-serif;
-  font-weight: 700;
   font-size: 16px;
   right: 135px;
   padding: 2px 12px;
@@ -41,9 +40,6 @@
 }
 
 @media screen and (max-width: 751px) {
-  .item-cards__container {
-  }
-
   .item-card {
     width: 164px;
     height: 164px;

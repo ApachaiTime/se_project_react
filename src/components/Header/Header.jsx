@@ -33,14 +33,10 @@ export default function Header({
           }}
           className="header__options"
         >
-          <img src={headerBtn} alt="" />
+          <img src={headerBtn} alt="Menu icon" />
         </button>
         <span className="header__span-right">
-          <ToggleSwitch
-            checked={checked}
-            onChange={handleChange}
-            labelFahrenheit="F"
-            labelCellsius="C"
+          <ToggleSwitch labelFahrenheit="F" labelCelsius="C" 
           />
 
           <button onClick={handleOpenAddGarmentModal} className="header__btn">

@@ -1,8 +1,8 @@
-import { APIkey, latitude, longitude } from "./constants";
-export function getWeatherData() {
-  const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`;
+import { apikey, latitude, longitude } from "./constants";
+function getWeatherData() {
+  const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apikey}`;
   return fetch(weatherURL)
-    .then((res) => res.json())
+    .then(checkResponse)
     .then((data) => {
       const weatherInfo = {
         city: data.name,
@@ -18,7 +18,7 @@ export function getWeatherData() {
     });
 }
 
-export function getWeatherCondition(temperature) {
+function getWeatherCondition(temperature) {
   if (temperature >= 80) {
     return "hot";
   } else if (temperature >= 60) {
@@ -28,11 +28,18 @@ export function getWeatherCondition(temperature) {
   }
 }
 
-export function handleError(error) {
-  console.error("Error fetching weather data:", error);
+const checkResponse = (res) => {
+  return res.ok
+    ? res.json()
+    : Promise.reject(new Error`{https ${res.status}}`());
+};
+
+function handleError(error) {
   return {
-    city: "failed to load",
-    temperature: "unknown",
-    condition: "failed to load",
+    city: `failed to load ${error}`,
+    temperature: `unknown ${error}`,
+    condition: `failed to load ${error}`,
   };
 }
+
+export { checkResponse, handleError, getWeatherCondition, getWeatherData };

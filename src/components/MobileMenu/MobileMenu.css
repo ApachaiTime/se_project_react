@@ -1,4 +1,4 @@
-.mobile {
+.mobile__modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,8 +11,8 @@
   visibility: hidden;
 }
 
-.mobile__modal {
-  position: fixed;
+.mobile__content {
+    position: fixed;
   top: 20px;
   box-sizing: border-box;
   width: 95%;
@@ -24,6 +24,7 @@
   border-radius: 20px;
   display: flex;
   box-shadow: 0px 2px 8px 0px #0000001a;
+  
 }
 
 .mobile__modal__opened {

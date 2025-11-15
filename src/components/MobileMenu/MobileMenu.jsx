@@ -2,18 +2,17 @@ import "./MobileMenu.css";
 import closeIcon from "../../assets/x-icon.png";
 import avatarPlaceholder from "../../assets/avatar.svg";
 export default function MobileMenu({
-  toggleMobileMenu,
   isMobileMenuOpened,
   handleOpenAddGarmentModal,
   onClose,
 }) {
   return (
-    <div className="mobile">
-      <div
-        className={`mobile__modal ${
-          isMobileMenuOpened ? "mobile__modal__opened" : ""
-        }`}
-      >
+    <div
+      className={`mobile__modal ${
+        isMobileMenuOpened ? "mobile__modal__opened" : ""
+      }`}
+    >
+      <div className="mobile__content">
         <button className="item__modal__close-btn" onClick={onClose}>
           <img src={closeIcon} alt="Close icon" />
         </button>

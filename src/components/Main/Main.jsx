@@ -9,16 +9,15 @@ export default function Main({
   children,
   cards,
   handleCardClick,
-  hideWeather = false,
 }) {
-  const currentTempUnit = useContext(CurrentTemperatureUnitContext);
+  const { currentTempUnit } = useContext(CurrentTemperatureUnitContext);
   const filteredClothes = cards.filter((item) => {
     return item.weather === getWeatherCondition(weatherData.temperature);
   });
   return (
     <main className="main">
       <div className="weather-info">
-        {!hideWeather && <WeatherCard weatherData={weatherData} />}
+        <WeatherCard weatherData={weatherData} />
         {children}
       </div>
       <section className="main__section">

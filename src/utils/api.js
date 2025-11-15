@@ -1,6 +1,7 @@
+import { checkResponse } from "./weatherApi";
 const baseUrl = "http://localhost:3001";
 const getItems = () => {
-  return fetch(`${baseUrl}/items`).then((res) => res.json());
+  return fetch(`${baseUrl}/items`).then(checkResponse);
 };
 
 const addItems = ({ name, imageUrl, weather }) => {
@@ -14,13 +15,13 @@ const addItems = ({ name, imageUrl, weather }) => {
       weather,
       imageUrl,
     }),
-  }).then((res) => res.json());
+  }).then(checkResponse);
 };
 
 const deleteItem = (id) => {
   return fetch(`${baseUrl}/items/${id}`, {
     method: "DELETE",
-  }).then((res) => res.json());
+  }).then(checkResponse);
 };
 
 export { getItems, addItems, deleteItem };

@@ -16,9 +16,9 @@ export const AddItemModal = ({
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    onAddItem(values);
-    setValues({ name: "", imageUrl: "", weather: "", id: "" });
-    onClose();
+    onAddItem(values).then(() => {
+      setValues({ name: "", imageUrl: "", weather: "", id: "" });
+    });
   }
   return isOpen ? (
     <ModalWithForm
@@ -40,6 +40,7 @@ export const AddItemModal = ({
         name="name"
         value={values.name}
         onChange={handleChange}
+        required
       />
       <label htmlFor="image" className="modal__input__title">
         Image
@@ -52,6 +53,7 @@ export const AddItemModal = ({
         name="imageUrl"
         value={values.imageUrl}
         onChange={handleChange}
+          required
       />
       <p className="modal__input__title">Select the weather type:</p>
       <ul className="modal__radio__list">
@@ -64,6 +66,7 @@ export const AddItemModal = ({
             value={"hot"}
             type="radio"
             className="modal__radio__input"
+              required
           />
           <label htmlFor="hot" className="modal__radio__label">
             Hot
@@ -78,6 +81,7 @@ export const AddItemModal = ({
             value={"warm"}
             type="radio"
             className="modal__radio__input"
+              required
           />
           <label htmlFor="warm" className="modal__radio__label">
             Warm
@@ -93,6 +97,7 @@ export const AddItemModal = ({
             value={"cold"}
             type="radio"
             className="modal__radio__input"
+              required
           />
           <label htmlFor="cold" className="modal__radio__label">
             Cold

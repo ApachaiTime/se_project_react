@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import { Routes, Route } from "react-router-dom";
 import { getItems, addItems, deleteItem } from "../../utils/api.js";
 import Profile from "../Profile/Profile.jsx";
@@ -19,6 +19,7 @@ import {
 } from "../../contexts/CurrentTemperatureUnitContext.js";
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(false);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
   const [currentTempUnit, setCurrentTempUnit] = useState("F");
   const [checked, setChecked] = useState(false);
@@ -31,9 +32,13 @@ export default function App() {
   });
 
   useEffect(() => {
-    getItems().then((items) => {
-      setCards(items);
-    });
+    getItems()
+      .then((items) => {
+        setCards(items);
+      })
+      .catch((err) => {
+        console.error("Encountered", err, "unable to load items");
+      });
     getWeatherData()
       .then((data) => setWeatherData(data))
 
@@ -43,7 +48,8 @@ export default function App() {
   }, []);
 
   const handleAddCard = (item) => {
-   return addItems({
+    setIsLoading(true);
+    return addItems({
       name: item.name,
       imageUrl: item.imageUrl,
       weather: item.weather,
@@ -51,18 +57,39 @@ export default function App() {
     })
       .then((res) => {
         setCards([res, ...cards]);
+      })
+      .then(() => {
+        setIsLoading(false);
         handleCloseModal();
- 
       })
       .catch((err) => {
         console.error("Encountered", err, "unable to add item");
-      throw err});
+        throw err;
+      });
+
   };
 
+  useEffect (() => {
+      if (!activeModal) return; 
+      const handleEscClose = (e) => {
+        if (e.key === "Escape") {
+          handleCloseModal();
+        }}
+        
+      document.addEventListener("keydown", handleEscClose);
+      return () => {
+        document.removeEventListener("keydown", handleEscClose);
+      };
+  }, [activeModal]);
+
   const onDelete = (item) => {
+    setIsLoading(true);
     deleteItem(item._id)
       .then(() => {
         setCards(cards.filter((currentItem) => currentItem._id !== item._id));
+      })
+      .then(() => {
+        setIsLoading(false);
         handleCloseModal();
       })
       .catch((err) =>
@@ -134,6 +161,7 @@ export default function App() {
         onDelete={onDelete}
         isOpen={activeModal === "preview"}
         card={selectedCard}
+        buttonText={isLoading ? "Deleting" : "Delete item"}
         onClose={handleCloseModal}
       ></ItemModal>
       <AddItemModal
@@ -142,7 +170,7 @@ export default function App() {
         title="Add New Garment"
         onAddItem={handleAddCard}
         name="add-garment"
-        buttonText="Add garment"
+        buttonText={isLoading ? "Saving" : "Add garment"}
       ></AddItemModal>
       <MobileMenu
         toggleMobileMenu={toggleMobileMenu}

@@ -18,8 +18,11 @@ export const AddItemModal = ({
     evt.preventDefault();
     onAddItem(values).then(() => {
       setValues({ name: "", imageUrl: "", weather: "", id: "" });
-    });
-  }
+    })
+    .catch((err) => {
+      console.error("Error adding item:", err);
+    })
+  };
   return isOpen ? (
     <ModalWithForm
       handleSubmit={handleSubmit}

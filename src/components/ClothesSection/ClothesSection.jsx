@@ -4,12 +4,9 @@ import { getWeatherCondition } from "../../utils/weatherApi";
 export default function ClothesSection({
   cards,
   handleCardClick,
-  weatherData,
+
   handleOpenAddGarmentModal,
 }) {
-  const filteredClothes = cards.filter((item) => {
-    return item.weather === getWeatherCondition(weatherData.temperature);
-  });
   return (
     <>
       <span className="clothes__options">
@@ -31,11 +28,11 @@ export default function ClothesSection({
           justifyContent: "flex-end",
         }}
       >
-        {filteredClothes.map(
+        {cards.map(
           (card) =>
             card && (
               <ItemCard
-                key={card.name}
+                key={card._id}
                 card={card}
                 handleCardClick={handleCardClick}
               />

@@ -1,7 +1,7 @@
 import "./ItemModal.css";
 
 import closeIcon from "../../assets/x-icon.png";
-export default function ItemModal({ isOpen, card, onClose, onDelete }) {
+export default function ItemModal({ isOpen, card, onClose, onDelete, buttonText }) {
   if (!card) return null;
 
   return (
@@ -21,7 +21,7 @@ export default function ItemModal({ isOpen, card, onClose, onDelete }) {
 
         <p className="item__modal__condition">Weather: {card.weather}</p>
         <button onClick={() => onDelete(card)} className="item__modal__delete">
-          Delete item
+        {buttonText}
         </button>
       </div>
     </div>

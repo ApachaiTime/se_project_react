@@ -61,55 +61,10 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
     },
     {
-      "_id": 17
-    },
-    {
-      "_id": 18
-    },
-    {
-      "_id": 19
-    },
-    {
-      "_id": 20
-    },
-    {
-      "name": "test",
-      "weather": "hot",
-      "imageUrl": "https://images.unsplash.com/photo-1631541909061-71e349d1f203?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1905",
-      "_id": 23
-    },
-    {
-      "name": "test",
-      "weather": "hot",
-      "imageUrl": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500",
-      "_id": 24
-    },
-    {
       "name": "test",
       "weather": "warm",
       "imageUrl": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500",
       "_id": 25
-    },
-    {
-      "_id": 29
-    },
-    {
-      "_id": 30
-    },
-    {
-      "_id": 31
-    },
-    {
-      "_id": 32
-    },
-    {
-      "_id": 33
-    },
-    {
-      "name": "Brown Sweater",
-      "weather": "hot",
-      "imageUrl": "https://images.unsplash.com/photo-1746150361891-d55977b2af64?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-      "_id": 35
     },
     {
       "name": "Brown Sweater",
@@ -152,6 +107,24 @@
       "weather": "warm",
       "imageUrl": "https://images.unsplash.com/photo-1746150361891-d55977b2af64?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
       "_id": 48
+    },
+    {
+      "name": "test",
+      "weather": "warm",
+      "imageUrl": "http://localhost:3000/se_project_react/src/assets/avatar.svg",
+      "_id": 53
+    },
+    {
+      "name": "test",
+      "weather": "warm",
+      "imageUrl": "http://localhost:3000/se_project_react/src/assets/avatar.svg",
+      "_id": 54
+    },
+    {
+      "name": "test",
+      "weather": "warm",
+      "imageUrl": "http://localhost:3000/se_project_react/src/assets/avatar.svg",
+      "_id": 55
     }
   ]
 }

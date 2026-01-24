@@ -3,6 +3,48 @@
   top: 123px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   width: fit-content;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar__profile-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 16px;
+}
+
+.sidebar__change-profile-button {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  padding-right: 16px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.sidebar__logout-button {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .sidebar {
+    top: 81px;
+    gap: 8px;
+  }
+
+  .sidebar__profile-info {
+    padding: 0;
+  }
 }

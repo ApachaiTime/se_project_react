@@ -2,6 +2,7 @@
   font-size: 20px;
   font-weight: bold;
   margin: 0;
+  white-space: nowrap;
 }
 
 .clothes__add__btn {
@@ -12,13 +13,46 @@
   font-size: 20px;
   cursor: pointer;
   color: #00000099;
+  white-space: nowrap;
 }
 
 .clothes__options {
   display: flex;
   gap: 10px;
-  padding-left: 12px;
-  justify-content: end;
   max-width: 55%;
-  padding-top: 35px;
+  position: absolute;
+  top: 108px;
+  max-height: 27px;
+}
+
+.clothes__list {
+  display: flex;
+  padding-top: 30px;
+  margin-left: auto;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+@media screen and (max-width: 1006px) {
+  .clothes__list {
+    display: inline;
+  }
+}
+/* @media screen and (max-width: 760px) {
+  .clothes__options {
+    top: 131px;
+    right: 33px;
+  }
+} */
+@media screen and (max-width: 600px) {
+  .clothes__list {
+    display: flex;
+    padding: 60px 0 0 0;
+    justify-content: center;
+  }
+
+  .clothes__options {
+    top: 127px;
+    gap: 0;
+    right: 20px;
+  }
 }

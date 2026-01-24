@@ -1,5 +1,5 @@
 .modal {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,7 +13,7 @@
 
 .modal__container {
   position: relative;
-  padding: 28px;
+  padding: 36px;
   background-color: #fff;
   z-index: 0;
   border-radius: 20px;
@@ -73,7 +73,7 @@
 }
 
 .modal__radio__input:checked + .modal__radio__label {
-  color: #000000;
+  color: #000;
 }
 
 .modal__submit-button {
@@ -86,6 +86,7 @@
   border-radius: 4px;
   max-width: 124px;
   padding: 8px 16px;
+  white-space: nowrap;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -96,8 +97,8 @@
 .modal__close__btn {
   background: none;
   position: absolute;
-  left: 460px;
-  top: 16px;
+  left: 470px;
+  top: 20px;
   border: none;
   cursor: pointer;
 }
@@ -105,4 +106,29 @@
 .modal__btn__img {
   width: 20px;
   height: 20px;
+}
+
+.modal__error {
+  color: #e53935;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  min-height: 16px;
+}
+
+.modal__error:empty {
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
+  .modal__container {
+    width: 350px;
+  }
+  .modal__input {
+    max-width: 350px;
+  }
+  .modal__close__btn {
+    left: 380px;
+    top: 20px;
+  }
 }

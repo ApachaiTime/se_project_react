@@ -125,6 +125,42 @@
       "weather": "warm",
       "imageUrl": "http://localhost:3000/se_project_react/src/assets/avatar.svg",
       "_id": 55
+    },
+    {
+      "name": "test",
+      "weather": "warm",
+      "imageUrl": "http://localhost:3000/se_project_react/src/assets/avatar.svg",
+      "_id": 56
+    },
+    {
+      "name": "Brown Sweater",
+      "weather": "warm",
+      "imageUrl": "https://images.unsplash.com/photo-1746150361891-d55977b2af64?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+      "_id": 74
+    },
+    {
+      "name": "test",
+      "weather": "cold",
+      "imageUrl": "https://images.unsplash.com/photo-1746150361891-d55977b2af64?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+      "_id": 86
+    },
+    {
+      "name": "Brown Sweater",
+      "weather": "warm",
+      "imageUrl": "https://images.unsplash.com/photo-1746150361891-d55977b2af64?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+      "_id": 87
+    },
+    {
+      "name": "Brown Sweater",
+      "weather": "cold",
+      "imageUrl": "https://images.unsplash.com/photo-1746150361891-d55977b2af64?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+      "_id": 88
+    },
+    {
+      "name": "Brown Sweater",
+      "weather": "warm",
+      "imageUrl": "https://images.unsplash.com/photo-1746150361891-d55977b2af64?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+      "_id": 89
     }
   ]
 }

@@ -39,6 +39,7 @@
   border: none;
   cursor: pointer;
   margin-right: 8px;
+  white-space: nowrap;
 }
 
 .header__name {
@@ -68,6 +69,50 @@
   right: 15px;
 }
 
+.header__fallback {
+  margin-left: 16px;
+  color: #b43b3b;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__fallback__btn {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.header__coords {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.header__coords-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.02);
+}
+
+.header__coords-indicator_geolocation {
+  background: #3dbb64; /* green */
+}
+.header__coords-indicator_fallback {
+  background: #d08b2a; /* amber */
+}
+
+.header__coords-indicator_unknown {
+  background: #9aa0a6; /* grey */
+}
+
 @media screen and (max-width: 760px) {
   .header__container {
     margin-bottom: 16px;
@@ -90,4 +135,20 @@
   .header__span-left {
     flex-direction: column;
   }
+
+  .header__fallback {
+    display: none;
+  }
+
+  .header__coords {
+    display: none;
+  }
+  .header__info {
+    position: absolute;
+    top: 9px;
+    left: 103px;
+  }
 }
+/* @media screen and (max-width: 600px) {
+
+} */

@@ -1,15 +1,21 @@
 import "./ClothesSection.css";
 import { ItemCard } from "../ItemCard/ItemCard";
-import { getWeatherCondition } from "../../utils/weatherApi";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import { useContext } from "react";
 export default function ClothesSection({
   cards,
   handleCardClick,
 
   handleOpenAddGarmentModal,
 }) {
+  const { currentUser } = useContext(CurrentUserContext);
+
   return (
     <>
-      <span className="clothes__options">
+      
+
+      <ul className="clothes__list">
+        <span className="clothes__options">
         <p className="clothes__text">Your items</p>
         <button
           className="clothes__add__btn"
@@ -18,25 +24,15 @@ export default function ClothesSection({
           + Add new
         </button>
       </span>
-
-      <ul
-        className="item-cards__container"
-        style={{
-          marginLeft: "auto",
-          paddingTop: "16px",
-          maxWidth: "1350px",
-          justifyContent: "flex-end",
-        }}
-      >
         {cards.map(
           (card) =>
-            card && (
+            card.owner === currentUser._id && (
               <ItemCard
                 key={card._id}
                 card={card}
                 handleCardClick={handleCardClick}
               />
-            )
+            ),
         )}
       </ul>
     </>

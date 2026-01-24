@@ -102,4 +102,4 @@ It reflects a focus on **clean code**, **user experience**, and **scalable archi
 
 - [Project Pitch Video](https://www.loom.com/share/6afd91a0a98b4abba0a99e76360af347?t=1)
 
--[Express Repo Link](https://github.com/ApachaiTime/se_project_express)
+- [Express Repo Link](https://github.com/ApachaiTime/se_project_express)

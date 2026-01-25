@@ -9,11 +9,8 @@
   font-size: 16px;
   line-height: 20px;
   color: rgba(255, 77, 0, 1);
-  font-size: 12px;
   margin: 6px 0 8px 0;
 }
-
-
 
 .modal__radio__item_type_error .modal__radio__label {
   color: #e74c3c;

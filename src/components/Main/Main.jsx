@@ -11,7 +11,7 @@ export default function Main({
   cards,
   handleCardClick,
   onCardLike,
-  card
+  card,
 }) {
   const { currentTempUnit } = useContext(CurrentTemperatureUnitContext);
   const filteredClothes = cards.filter((item) => {
@@ -25,7 +25,7 @@ export default function Main({
       </div>
       <section className="main__section">
         <h2 className="main__title">
-          Today is{" "}
+          Today is
           {weatherData["temperature" + (currentTempUnit === "C" ? "C" : "")] +
             "°" +
             currentTempUnit}

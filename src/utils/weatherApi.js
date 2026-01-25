@@ -1,4 +1,4 @@
-import { apikey, latitude, longitude } from "./constants";
+import { apiKey, latitude, longitude } from "./constants";
 
 function getUserCoords(timeout = 10000) {
   return new Promise((resolve, reject) => {
@@ -21,7 +21,7 @@ function getUserCoords(timeout = 10000) {
 }
 
 function buildWeatherUrl(lat, lon) {
-  return `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apikey}`;
+  return `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
 }
 
 function getWeatherData() {
@@ -51,12 +51,6 @@ function getWeatherData() {
             sunrise: data.sys.sunrise,
             coordsSource: _fallback ? "fallback" : "geolocation",
           };
-
-          // debug: log API response temps and chosen source
-          try {
-            // eslint-disable-next-line no-console
-          } catch (e) {}
-
           return weatherInfo;
         });
     });

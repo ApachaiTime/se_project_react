@@ -4,7 +4,7 @@ export function useForm(defaultValues) {
   const [values, setValues] = useState(defaultValues);
 
   const handleChange = (evt) => {
-    const { name, value, key } = evt.target;
+    const { name, value } = evt.target;
     setValues({ ...values, [name]: value });
   };
   return { values, handleChange, setValues };

@@ -43,6 +43,9 @@ export const AddItemModal = ({
         })
         .catch((err) => {
           console.error("Error adding item:", err);
+        })
+        .finally(() => {
+          setSubmitted(false);
         });
     }
   }

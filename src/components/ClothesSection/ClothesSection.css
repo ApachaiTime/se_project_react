@@ -26,28 +26,27 @@
 }
 
 .clothes__list {
+  list-style: none;
   display: flex;
   padding-top: 30px;
   margin-left: auto;
   flex-wrap: wrap;
   gap: 17px;
+  width: 78%;
+  justify-content: end;
 }
-@media screen and (max-width: 1006px) {
-  .clothes__list {
-    display: inline;
-  }
-}
-/* @media screen and (max-width: 760px) {
+@media screen and (max-width: 760px) {
   .clothes__options {
     top: 131px;
     right: 33px;
   }
-} */
+}
 @media screen and (max-width: 600px) {
   .clothes__list {
     display: flex;
-    padding: 60px 0 0 0;
     justify-content: center;
+    padding: 73px 0 0 0;
+    margin: 0 auto 0 auto;
   }
 
   .clothes__options {

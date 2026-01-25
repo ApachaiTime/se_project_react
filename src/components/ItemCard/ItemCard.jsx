@@ -2,7 +2,7 @@ import "./ItemCard.css";
 import { useContext } from "react";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 export function ItemCard({ card, handleCardClick, onCardLike }) {
-  const { currentUser } = useContext(CurrentUserContext);
+  const { currentUser, isLoggedIn } = useContext(CurrentUserContext);
   const isLiked =
     card.likes && card.likes.some((userId) => userId === currentUser?._id);
   const handleLike = () => {
@@ -19,11 +19,15 @@ export function ItemCard({ card, handleCardClick, onCardLike }) {
         alt={card.name}
         onClick={() => handleCardClick(card)}
       />
-      <button
-        onClick={handleLike}
-        className={`item__like-button ${isLiked ? "item__like-button_active" : ""}`}
-      ></button>
-      <p className="item__title">{card.name}</p>
+      {isLoggedIn ? (
+        <>
+          <button
+            onClick={handleLike}
+            className={`item__like-button ${isLiked ? "item__like-button_active" : ""}`}
+          ></button>
+          <p className="item__title">{card.name}</p>
+        </>
+      ) : null}
     </div>
   );
 }

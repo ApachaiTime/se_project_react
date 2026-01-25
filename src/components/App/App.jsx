@@ -6,7 +6,7 @@ import {
   addItems,
   deleteItem,
   addLike,
-  removelike,
+  removeLike,
 } from "../../utils/api.js";
 import Profile from "../Profile/Profile.jsx";
 import MobileMenu from "../MobileMenu/MobileMenu.jsx";
@@ -93,7 +93,7 @@ export default function App() {
               );
             })
             .catch((err) => console.error(err))
-        : removelike(id)
+        : removeLike(id)
             .then((updatedCard) => {
               setCards((cards) =>
                 cards.map((item) => (item._id === id ? updatedCard : item)),
@@ -117,7 +117,10 @@ export default function App() {
         setIsLoading(false);
       })
       .catch((err) => {
-        return console.error("Encountered", err, "unable to add item");
+        console.error("Encountered", err, "unable to add item");
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -190,7 +193,7 @@ export default function App() {
   return (
     <ErrorContext.Provider value={{ error, setError }}>
       <CurrentUserContext.Provider
-        value={{ currentUser, setCurrentUser, setIsLoggedIn }}
+        value={{ currentUser, setCurrentUser, setIsLoggedIn, isLoggedIn }}
       >
         <CurrentTemperatureUnitContext.Provider
           value={{ currentTempUnit, handleChange, checked }}
@@ -253,7 +256,7 @@ export default function App() {
             buttonText={isLoading ? "Saving" : "Add garment"}
           ></AddItemModal>
           <MobileMenu
-          isLoggedIn={isLoggedIn}
+            isLoggedIn={isLoggedIn}
             toggleMobileMenu={toggleMobileMenu}
             isMobileMenuOpened={isMobileMenuOpened}
             handleOpenAddGarmentModal={handleOpenAddGarmentModal}

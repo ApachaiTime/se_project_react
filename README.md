@@ -25,7 +25,6 @@ This project was built to demonstrate a complete, production‑style workflow—
 * **React** – Component‑based UI and state management
 * **JavaScript (ES6+)** – Application logic
 * **HTML & CSS** – Semantic structure and custom styling
-* **Tailwind CSS** – Utility‑first styling and responsive layout
 * **Tailspin** – Elegant loading spinners and async feedback
 
 ### Backend

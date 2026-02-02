@@ -115,6 +115,7 @@ export const AddItemModal = ({
             id="hot"
             value={"hot"}
             type="radio"
+            required
             className="modal__radio__input"
           />
 
@@ -134,6 +135,7 @@ export const AddItemModal = ({
             id="warm"
             value={"warm"}
             type="radio"
+            required
             className="modal__radio__input"
           />
 
@@ -154,6 +156,7 @@ export const AddItemModal = ({
             id="cold"
             value={"cold"}
             type="radio"
+            required
             className="modal__radio__input"
           />
 

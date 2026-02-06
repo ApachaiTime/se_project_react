@@ -12,7 +12,7 @@ export default function ClothesSection({
 
   return (
     <ul className="clothes__list">
-     <li> <span className="clothes__options">
+      <span className="clothes__options">
         <p className="clothes__text">Your items</p>
         <button
           className="clothes__add__btn"
@@ -21,6 +21,7 @@ export default function ClothesSection({
           + Add new
         </button>
       </span>
+     <li> 
       </li>
       {cards.map(
         (card) =>

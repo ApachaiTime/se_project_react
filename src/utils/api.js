@@ -1,5 +1,5 @@
 import { endPointCall } from "./auth.js";
-const baseUrl = "http://localhost:3001";
+const baseUrl = "https://seprojectexpress-production-2cb7.up.railway.app";
 
 const getItems = () => {
   return endPointCall("/items", "GET", null);

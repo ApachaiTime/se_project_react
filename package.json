@@ -3,16 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ApachaiTime.github.io/se_project_react/",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "start": "serve -s dist -p $PORT",
     "dev": "vite --open",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "serve": "^14.2.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-loader-spinner": "^8.0.2",

@@ -51,7 +51,11 @@ export default function Header({
           {/* show persistent fallback notice when using default coords */}
           {weatherData && weatherData.coordsSource === "fallback" ? (
             <div className="header__fallback">
-              Using default location (permission denied or unavailable)
+              <p className="header__fallback__text">
+                {" "}
+                Using default location (permission denied or unavailable)
+              </p>
+
               <button
                 className="header__fallback__btn"
                 onClick={() => onUseGeolocation && onUseGeolocation()}

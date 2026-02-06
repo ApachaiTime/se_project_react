@@ -30,28 +30,35 @@
   display: flex;
   padding-top: 30px;
   margin-left: auto;
+
   flex-wrap: wrap;
   gap: 17px;
-  width: 78%;
+  max-width: 700px;
   justify-content: end;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 860px) {
   .clothes__options {
     top: 131px;
     right: 33px;
   }
+
+  .clothes__list {
+    max-width: 680px;
+    padding-top: 50px
+  }
 }
 @media screen and (max-width: 600px) {
   .clothes__list {
-    display: flex;
-    justify-content: center;
     padding: 73px 0 0 0;
-    margin: 0 auto 0 auto;
   }
 
   .clothes__options {
-    top: 127px;
+    top: 131px;
     gap: 0;
-    right: 20px;
+    right: 16px;
+  }
+
+  .clothes__text {
+    visibility: hidden;
   }
 }

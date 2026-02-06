@@ -20,7 +20,3 @@
   padding: 20px 16px;
   color: #ffffff;
 }
-@media screen and (max-width: 760px) {
-  .weather-card__icon {
-  }
-}

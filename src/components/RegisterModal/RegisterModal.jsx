@@ -61,6 +61,7 @@ const RegisterModal = ({
       handleSubmit={handleSignUp}
       setIsLoading={setIsLoading}
       isLoading={isLoading}
+      isValid={isValid}
     >
       {showSuccess == true ? (
         <p className="modal__success__message">
@@ -85,7 +86,7 @@ const RegisterModal = ({
         type="email"
         placeholder="Email"
         name="email"
-        values={values.email}
+        value={values.email}
         onChange={handleChange}
         required
         minLength={1}

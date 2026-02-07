@@ -68,6 +68,7 @@ const LoginModal = ({
       handleSubmit={handleSignIn}
       setIsLoading={setIsLoading}
       isLoading={isLoading}
+      isValid={isValid}
     >
       <label htmlFor="email" className="modal__input__title">
         Email

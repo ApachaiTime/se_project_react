@@ -13,6 +13,7 @@ export default function ModalWithForm({
   isLoading,
   isValid
 }) {
+  console.log("ModalWithForm isValid:", isValid);
   return isOpen ? (
     <div className={`modal modal_type_${name}`}>
       <div className="modal__container">

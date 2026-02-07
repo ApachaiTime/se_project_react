@@ -49,6 +49,8 @@ export const AddItemModal = ({
         });
     }
   }
+
+
   return isOpen ? (
     <ModalWithForm
       title={title}
@@ -58,6 +60,7 @@ export const AddItemModal = ({
       onClose={onClose}
       handleSubmit={handleSubmitCard}
       setIsLoading={setIsLoading}
+      isValid={isValid}
     >
       <label htmlFor="name" className="modal__input__title">
         Name

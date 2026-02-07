@@ -19,6 +19,10 @@
   border-radius: 20px;
 }
 
+.modal__content {
+  position: relative;
+}
+
 .modal__title {
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 700;
@@ -87,6 +91,10 @@
   max-width: 124px;
   padding: 8px 16px;
   white-space: nowrap;
+ background-color: rgba(0, 0, 0, 0.836);
+}
+
+.modal__submit-button_disabled {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -97,8 +105,8 @@
 .modal__close__btn {
   background: none;
   position: absolute;
-  left: 470px;
-  top: 20px;
+  top: 12px;
+  right: 0px;
   border: none;
   cursor: pointer;
 }
@@ -126,9 +134,5 @@
   }
   .modal__input {
     width: 72vw;
-  }
-  .modal__close__btn {
-    left: 380px;
-    top: 20px;
   }
 }

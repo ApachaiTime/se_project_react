@@ -1,6 +1,7 @@
 import "./ModalWithForm.css";
 import Spinner from "../Spinner/Spinner";
 import closeIcon from "../../assets/x-icon.png";
+
 export default function ModalWithForm({
   title,
   name,
@@ -10,6 +11,7 @@ export default function ModalWithForm({
   children,
   handleSubmit,
   isLoading,
+  isValid
 }) {
   return isOpen ? (
     <div className={`modal modal_type_${name}`}>
@@ -30,7 +32,8 @@ export default function ModalWithForm({
             ) : (
               <button
                 type="submit"
-                className={`modal__submit-button modal__submit-button_type_${name}`}
+                disabled={isValid === false}
+                className={`modal__submit-button modal__submit-button_type_${name} ${isValid === false ? 'modal__submit-button_disabled': ""}`}
               >
                 {buttonText}
               </button>

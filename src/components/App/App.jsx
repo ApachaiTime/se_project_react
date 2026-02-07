@@ -28,6 +28,7 @@ import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperature
 import { CurrentUserContext } from "../../contexts/CurrentUserContext.js";
 
 export default function App() {
+  const [active, setActive] = useState(false)
   const [error, setError] = useState(null);
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);

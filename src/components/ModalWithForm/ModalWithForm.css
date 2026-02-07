@@ -122,10 +122,10 @@
 
 @media screen and (max-width: 760px) {
   .modal__container {
-    width: fit-content;
+    width: 72vw;
   }
   .modal__input {
-    max-width: fit-content;
+    width: 72vw;
   }
   .modal__close__btn {
     left: 380px;

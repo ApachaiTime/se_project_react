@@ -18,6 +18,7 @@ export default function Main({
     return item.weather === getWeatherCondition(weatherData.temperature);
   });
   return (
+    
     <main className="main">
       <div className="weather-info">
         <WeatherCard weatherData={weatherData} />

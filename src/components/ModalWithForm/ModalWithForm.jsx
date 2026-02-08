@@ -11,9 +11,8 @@ export default function ModalWithForm({
   children,
   handleSubmit,
   isLoading,
-  isValid
+  isValid,
 }) {
-  console.log("ModalWithForm isValid:", isValid);
   return isOpen ? (
     <div className={`modal modal_type_${name}`}>
       <div className="modal__container">
@@ -34,7 +33,7 @@ export default function ModalWithForm({
               <button
                 type="submit"
                 disabled={isValid === false}
-                className={`modal__submit-button modal__submit-button_type_${name} ${isValid === false ? 'modal__submit-button_disabled': ""}`}
+                className={`modal__submit-button modal__submit-button_type_${name} ${isValid === false ? "modal__submit-button_disabled" : ""}`}
               >
                 {buttonText}
               </button>

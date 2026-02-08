@@ -238,9 +238,9 @@ export default function App() {
                 }
               />
             </Routes>
-          </div>
+          
           <Footer />
-
+</div>
           <ItemModal
             onDelete={onDelete}
             isOpen={activeModal === "preview"}

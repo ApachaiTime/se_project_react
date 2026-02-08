@@ -1,5 +1,6 @@
 import { endPointCall } from "./auth.js";
-const baseUrl = "https://seprojectexpress-production-2cb7.up.railway.app";
+const baseUrl = import.meta.env.VITE_API_URL
+
 
 const getItems = () => {
   return endPointCall("/items", "GET", null);

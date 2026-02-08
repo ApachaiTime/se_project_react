@@ -95,7 +95,7 @@ It reflects a focus on **clean code**, **user experience**, and **scalable archi
 
 ### 🗡 Links
 
-- [Project Link](https://apachaitime.github.io/se_project_react/)
+- [Project Link](https://seprojectreact-production.up.railway.app/)
 
 - [Figma Design](https://www.figma.com/file/DTojSwldenF9UPKQZd6RRb/Sprint-10%3A-WTWR)
 

@@ -1,6 +1,6 @@
 .sidebar {
-  position: absolute;
-  top: 123px;
+  position: relative;
+  top: 0px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -22,7 +22,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 100%;
-  padding-right: 16px;
+  white-space: nowrap;
   background: none;
   border: none;
   padding: 0;
@@ -40,7 +40,7 @@
 }
 @media screen and (max-width: 600px) {
   .sidebar {
-    top: 81px;
+    top: 0px;
     gap: 8px;
   }
 

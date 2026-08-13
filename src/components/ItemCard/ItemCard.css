@@ -13,12 +13,21 @@
   height: 328px;
 }
 
-.item__title {
+.item-card__container {
+  position: absolute;
   left: 0;
   right: 0;
   top: 5px;
-  text-align: center;
+  display: flex;
+  gap: 6px;
   margin: 12px auto;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.item__title {
+  margin: 0;
+  text-align: center;
   font-weight: 700;
   line-height: 20px;
   font-family: "Cabinet Grotesk", sans-serif;
@@ -27,7 +36,6 @@
   border-radius: 4px;
   max-width: fit-content;
   background-color: #fff;
-  position: absolute;
   color: rgba(0, 0, 0, 0.6);
 }
 .item__img {
@@ -39,9 +47,6 @@
 }
 
 .item__like-button {
-  position: absolute;
-  right: 108px;
-  top: 21px;
   background-color: transparent;
   border-style: none;
   cursor: pointer;

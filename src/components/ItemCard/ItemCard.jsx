@@ -11,7 +11,7 @@ export function ItemCard({ card, handleCardClick, onCardLike }) {
       isLiked: isLiked,
     });
   };
-  return (
+  return isLoggedIn ? (
     <div className="item-card">
       <img
         className="item__img"
@@ -19,15 +19,25 @@ export function ItemCard({ card, handleCardClick, onCardLike }) {
         alt={card.name}
         onClick={() => handleCardClick(card)}
       />
-      {isLoggedIn ? (
-        <>
-          <button
-            onClick={handleLike}
-            className={`item__like-button ${isLiked ? "item__like-button_active" : ""}`}
-          ></button>
-          <p className="item__title">{card.name}</p>
-        </>
-      ) : null}
+      <div className="item-card__container">
+        <button
+          onClick={handleLike}
+          className={`item__like-button ${isLiked ? "item__like-button_active" : ""}`}
+        ></button>
+        <p className="item__title">{card.name}</p>
+      </div>
+    </div>
+  ) : (
+    <div className="item-card">
+      <img
+        className="item__img"
+        src={card.imageUrl}
+        alt={card.name}
+        onClick={() => handleCardClick(card)}
+      />{" "}
+      <div className="item-card__container">
+        <p className="item__title">{card.name}</p>
+      </div>
     </div>
   );
 }

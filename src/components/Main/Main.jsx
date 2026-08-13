@@ -11,7 +11,6 @@ export default function Main({
   cards,
   handleCardClick,
   onCardLike,
-  card,
 }) {
   const { currentTempUnit } = useContext(CurrentTemperatureUnitContext);
   const filteredClothes = cards.filter((item) => {
